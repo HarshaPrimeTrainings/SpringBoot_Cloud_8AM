@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<center>
+<h1> Spring Security Custom Login Form</h1>
+
+<div th:if="${param.error}" style="color: red">
+Login Failed check username/Password
+</div>
+
+<div th:if="${param.logout}" style="color: green">
+Loggedout Succfully
+</div>
+
+<form th:action="@{/login}" method="post">
+	UserNmae<input type="text" name="username">
+	</br>
+	Password<input type="password" name="password">
+	</br>
+	<input type="submit">
+
+</form>
+
+
+
+
+</center>
+</body>
+</html>
